@@ -1,0 +1,239 @@
+:root {
+  --dark-color: #19283f;
+  --green-color: #33d1cc;
+  --red-color: #ff3150;
+  --yellow-color: #ffc400;
+  --section-color: #eff7fa;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.main-btn {
+  background-color: var(--red-color);
+  padding: 0.5rem 1rem;
+  color: var(--yellow-color);
+}
+.main-btn:hover {
+  color: var(--yellow-color);
+  background-color: #c32039;
+}
+
+.main-btn:active {
+  color: var(--yellow-color) !important;
+  background-color: #981c2e !important;
+}
+
+.main-title::after {
+  content: "";
+  position: absolute;
+  background-color: var(--green-color);
+  width: 120px;
+  height: 2px;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Start Navbar */
+.navbar {
+  background-color: var(--dark-color);
+}
+
+.navbar .nav-link {
+  color: white;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:active {
+  color: var(--green-color);
+}
+
+.navbar .navbar-toggler {
+  border: #fff 1px solid;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+  border-color: var(--green-color);
+}
+
+.navbar .search {
+  color: var(--green-color);
+
+  border-left: 1px solid;
+}
+
+.navbar .navbar-toggler svg {
+  color: #fff;
+}
+
+/* End Navbar */
+
+/* Start Landing */
+.landing {
+  min-height: calc(100vh - 72px);
+  background-color: #19283f;
+}
+@media (max-width: 991px) {
+  .landing {
+    min-height: calc(100vh - 70px);
+  }
+}
+/* End Landing */
+
+/* Start Features */
+.features .icon-holder {
+  height: 200px;
+}
+.features .icon-holder .number {
+  font-size: 12rem;
+  color: var(--section-color);
+}
+.features .icon-holder .icon {
+  color: var(--green-color);
+}
+.features .icon-holder svg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.features h4 {
+  color: var(--yellow-color);
+}
+/* End Features */
+
+/* Start Our Work */
+
+.our-work {
+  background-color: var(--section-color);
+}
+
+.our-work ul li {
+  cursor: pointer;
+}
+
+.our-work ul li:not(.active):hover {
+  color: var(--red-color);
+  transition: 0.3s;
+}
+
+.our-work ul li.active {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+  padding: 0.5rem 1rem;
+}
+
+.our-work .box {
+  padding: 5px;
+  overflow: hidden;
+}
+.our-work .box::before {
+  content: attr(data-work);
+  background-color: #33d1cc90;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(calc(-100% - 10px));
+  transition: 0.3s;
+}
+
+.our-work .box:hover::before {
+  transform: translateX(0);
+}
+
+/* End Our Work */
+
+/* Start Stuff */
+
+.stuff .description {
+  max-width: 500px;
+}
+
+/* End Stuff */
+
+/* Start Team */
+
+.team {
+  background-color: var(--section-color);
+}
+
+.team h2 {
+  color: var(--yellow-color);
+}
+
+.team h4 {
+  background-color: var(--green-color);
+}
+
+/* End Team */
+
+/* Start Project */
+.project {
+  background-color: var(--dark-color);
+}
+/* End Project */
+
+/* Start Subscribe */
+.subscribe {
+  background-color: var(--yellow-color);
+}
+
+.subscribe input[type="text"] {
+  border: none;
+  border-bottom: 1px solid white;
+}
+.subscribe input[type="text"]:focus {
+  outline: none;
+}
+
+.subscribe input::placeholder {
+  color: white;
+}
+
+.subscribe input[type="submit"] {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+/* End Subscribe */
+
+/* Start Footer */
+
+footer {
+  background-color: var(--dark-color);
+}
+
+footer .info .copyright > span {
+  color: var(--green-color);
+}
+footer .info .copyright div span {
+  color: var(--yellow-color);
+}
+
+footer .contact ul svg {
+  width: 20px;
+  height: 20px;
+}
+
+footer .facebook {
+  background-color: #1877f2;
+}
+
+footer .twitter {
+  background-color: #1da1f2;
+}
+footer .linkedin {
+  background-color: #0077b5;
+}
+footer .youtube {
+  background-color: #ff0000;
+}
+/* End Footer */
